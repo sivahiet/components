@@ -1,0 +1,31 @@
+{
+  "name": "@ubmedia/isg-button",
+  "version": "0.0.1",
+  "main": "dist/ubmisg.isg-button.umd.js",
+  "module": "dist/ubmisg.isg-button.es.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/styles.css",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run build:css && tsup src/index.tsx --format esm,cjs --dts --out-dir dist",
+    "build:css": "tailwindcss -m -i ../../tailwind-entry.css -o ./dist/styles.css --config ../../../tailwind.config.js",
+    "test": "vitest run",
+    "lint": "eslint src --ext .tsx"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "lucide-react": "^0.536.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "style": "./dist/styles.css",
+      "import": "./dist/ubmisg.isg-button.es.js",
+      "require": "./dist/ubmisg.isg-button.umd.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  }
+}

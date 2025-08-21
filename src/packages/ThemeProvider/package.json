@@ -1,0 +1,28 @@
+{
+  "name": "@ubmedia/theme-provider",
+  "version": "0.0.5",
+  "main": "dist/ubmisg.theme-provider.umd.js",
+  "module": "dist/ubmisg.theme-provider.es.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/styles.css",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run build:css && tsup src/index.ts --format esm,cjs --dts --out-dir dist",
+    "build:css": "tailwindcss -m -i ../../tailwind-entry.css -o ./dist/styles.css --config ../../../tailwind.config.js",
+    "test": "vitest run",
+    "lint": "eslint src --ext .tsx"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "style": "./dist/styles.css",
+      "import": "./dist/ubmisg.theme-provider.es.js",
+      "require": "./dist/ubmisg.theme-provider.umd.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  }
+}

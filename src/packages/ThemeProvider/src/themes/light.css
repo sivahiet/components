@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global fallback (default light theme) */
+:root {
+  --color-bg: white;
+  --color-text: black;
+  --color-primary: #2563eb;
+  --color-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-muted: #f3f4f6;
+  --color-accent: #f59e0b;
+  --color-link: #3b82f6;
+}
+
+/* Scoped Light Theme Variables */
+.light {
+  --color-bg: #ffffff;
+  --color-text: #1f2937;
+  --color-primary: #2563eb;
+  --color-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-muted: #f3f4f6;
+  --color-accent: #f59e0b;
+  --color-link: #3b82f6;
+}
+
+/* Background Utilities */
+.light -bg-theme {
+  background-color: var(--color-bg) !important;
+}
+.light -bg-primary {
+  background-color: var(--color-primary) !important;
+}
+.light -bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+.light -bg-muted {
+  background-color: var(--color-muted) !important;
+}
+.light -bg-accent {
+  background-color: var(--color-accent) !important;
+}
+
+/* Text Color Utilities */
+.light -text-theme {
+  color: var(--color-text) !important;
+}
+.light -text-primary {
+  color: var(--color-primary) !important;
+}
+.light -text-secondary {
+  color: var(--color-secondary) !important;
+}
+.light -text-muted {
+  color: var(--color-muted) !important;
+}
+.light -text-accent {
+  color: var(--color-accent) !important;
+}
+.light -text-link {
+  color: var(--color-link) !important;
+}
+
+/* Border Color Utilities */
+.light -border-theme {
+  border-color: var(--color-border) !important;
+}
+.light -border-primary {
+  border-color: var(--color-primary) !important;
+}
+.light -border-secondary {
+  border-color: var(--color-secondary) !important;
+}
+.light -border-muted {
+  border-color: var(--color-muted) !important;
+}
+.light -border-accent {
+  border-color: var(--color-accent) !important;
+}
+
+/* Optional Link Styling */
+.light a-link {
+  color: var(--color-link) !important;
+  text-decoration: underline;
+}
+.light a-link:hover {
+  color: var(--color-primary) !important;
+}

@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scoped Dark Theme Variables */
+.dark {
+  --color-bg: #1f2937; /* slate-800 */
+  --color-text: #f9fafb; /* slate-50 */
+  --color-primary: #3b82f6; /* blue-500 */
+  --color-secondary: #9ca3af; /* gray-400 */
+  --color-border: #374151; /* slate-700 */
+  --color-muted: #4b5563; /* slate-600 */
+  --color-accent: #fbbf24; /* yellow-400 */
+  --color-link: #60a5fa; /* blue-400 */
+}
+
+/* Background Utilities */
+.dark -bg-theme {
+  background-color: var(--color-bg) !important;
+}
+.dark -bg-primary {
+  background-color: var(--color-primary) !important;
+}
+.dark -bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+.dark -bg-muted {
+  background-color: var(--color-muted) !important;
+}
+.dark -bg-accent {
+  background-color: var(--color-accent) !important;
+}
+
+/* Text Color Utilities */
+.dark -text-theme {
+  color: var(--color-text) !important;
+}
+.dark -text-primary {
+  color: var(--color-primary) !important;
+}
+.dark -text-secondary {
+  color: var(--color-secondary) !important;
+}
+.dark -text-muted {
+  color: var(--color-muted) !important;
+}
+.dark -text-accent {
+  color: var(--color-accent) !important;
+}
+.dark -text-link {
+  color: var(--color-link) !important;
+}
+
+/* Border Color Utilities */
+.dark -border-theme {
+  border-color: var(--color-border) !important;
+}
+.dark -border-primary {
+  border-color: var(--color-primary) !important;
+}
+.dark -border-secondary {
+  border-color: var(--color-secondary) !important;
+}
+.dark -border-muted {
+  border-color: var(--color-muted) !important;
+}
+.dark -border-accent {
+  border-color: var(--color-accent) !important;
+}
+
+/* Optional Link Styling */
+.dark a-link {
+  color: var(--color-link) !important;
+  text-decoration: underline;
+}
+.dark a-link:hover {
+  color: var(--color-primary) !important;
+}
